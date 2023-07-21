@@ -15,13 +15,21 @@
     }
   </style>
 <body>
+  {% include 'nav.html' %}
     <div class='container'>
     <h1 class='text-center mt-2 mb-2'>El Sol de Acapulco</h1>
     <img class='img-fluid' id='banner' src='https://oscarwebpage--oscarsuarez12.repl.co/static/hoja.jpg' >
     <h2 class='text-center mt-2 mt-2'>Variedades de la mejor calidad</h2>
+    <div class='row' style='margin-bottom:16px'>
+      <div class='col-md-6'>
     <p class='lead mt-2 mt-2'>
       Descubre un mundo de posibilidades con nuestra amplia gama de productos. En nuestro dispensario, te ofrecemos una selección cuidadosamente cultivada de variedades de alta calidad que te permitirán disfrutar de una experiencia excepcional. Desde variedades relajantes hasta opciones estimulantes, tenemos la opción perfecta para cada ocasión. Nuestro compromiso con la calidad y la seguridad garantiza que cada producto que adquieras cumpla con los estándares más exigentes.
     </p>
+      </div> 
+      <div class='d-none d-md-block col-md-6'>
+      <img src='/static/green.jpg' style='height:360px;border-radius:4px;'>
+      </div>
+    </div>  
     <h2 class='text-center'>Productos</h2>
     <div>
       {% for producto in productos %}
@@ -29,8 +37,9 @@
       {% endfor %}
     </div>
     <div class='text-center'>
-      <button class='btn btn-primary btn-lg'>Comprar</button>
+      <a class='btn btn-primary btn-lg' href='mailto:elsoldeacap@gmail.com?subject=Questions%20about%20us&body=Name%3A%3Center%20your%20name%3E%0D%0A%0D%0AQuestion%3A%3Center%20the%20question%3E%0D%0A%0D%0A'>Comprar</a>
         <p class='mt-4'>Copyright 2022</p>
     </div>
+      {% include 'footer.html' %}
 </body>
 </html>
